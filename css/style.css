@@ -11,6 +11,28 @@ body{
     margin: 0;
 }
 
+#menu{
+    background-color: black !important;
+}
+
+.icono-menu{
+    background-color: white;
+}
+
+.container-fluid .boton-menu{
+    background-color: white;
+}
+
+.nav-item .link-menu{
+    
+    font-weight: bold;
+    color: rgb(241, 101, 0);
+}
+
+.navbar-nav .link-menu:hover{
+    color: rgb(168, 73, 5);
+}
+
 h1{ font-size: 3.5em;}
 h2{ font-size: 2.7em;}
 h3{ font-size: 2em;}
