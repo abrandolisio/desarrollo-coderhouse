@@ -552,6 +552,18 @@ footer .container{
     justify-content: flex-end;
 }
 
+@media (max-width: 768px){
+    #hero h1{
+        font-size: 3em;
+    }
+
+    #box .descripcion .productos{
+        background-size: 100% 50%; 
+        padding: 1em;
+    }
+}
+
+
 @media (max-width: 1199px){
     .container .descripcion{
         display: flex;
