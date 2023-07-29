@@ -158,7 +158,7 @@ header a:hover{
     display: flex;
     justify-content: center;
     align-items: center; 
-} */
+}
 
   #portada .img-container{
         background-image: url("../images/goku-vs-freezer.jpg");
@@ -305,10 +305,10 @@ header a:hover{
 
 /* Final BOX ARTICULOS*/
 
-#caracteristicas .container{
+/* #caracteristicas .container{
     text-align: center;
     padding: 250px 12px;
-}
+} */
 
 #caracteristicas li{
     margin: 16px 0px;
@@ -355,10 +355,10 @@ footer .container{
 
 
 /**/
-header{
+/* header{
     position: fixed;
     width: 100%;
-}
+} */
 
 header .container{
     flex-direction: row;
@@ -525,12 +525,12 @@ background-image: linear-gradient(
 
 }
 /* FINAL ARTICULOS */
-#caracteristicas{
+/* #caracteristicas{
     background-image: url("../images/maps.jpeg");
     background-repeat: no-repeat;
     background-size: 500px 400px;
     background-position: calc(100vw - 500px) 120px;
-}
+} */
 
 #caracteristicas .container{
     text-align: initial;
@@ -552,6 +552,51 @@ footer .container{
     justify-content: flex-end;
 }
 
+/* Contacto */
+.contacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas: 
+        "formulario formulario maps maps"
+        "formulario formulario maps maps";
+    gap: 1em;
+    margin-bottom: 3em;
+    padding: 1em;
+}
+
+.titulo{
+    text-align: center;
+    padding-top: 3em;
+    margin-bottom: 2em;
+}
+
+.formulario{
+    grid-area: formulario;
+
+    
+}
+
+.maps{
+    grid-area: maps;
+    background-image: url(../images/maps.jpeg);
+
+}
+
+
+
+
+.maps img{
+    height: 50% ;
+    max-width: 50%;
+}
+
+#boton{
+    margin: 1em;
+    padding: 1em;
+}
+
 @media (max-width: 768px){
     #hero h1{
         font-size: 3em;
@@ -561,10 +606,28 @@ footer .container{
         background-size: 100% 50%; 
         padding: 1em;
     }
+
 }
 
 
 @media (max-width: 1199px){
+    header{
+        position: relative;
+    }
+
+
+    .contacto{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "maps"
+            "formulario";
+    }
+
+    #caracteristicas .container{
+        padding: 0;
+    }
+
     .container .descripcion{
         display: flex;
         flex-direction: column;
@@ -608,9 +671,7 @@ footer .container{
 }
 
 @media (min-width: 1200px) {
-    #caracteristicas{
-        background-position-x: calc(100vw - 800px);
-    }
+
 
     #box .productos{
         background-color: rgba(50, 50, 50, 1);
@@ -656,7 +717,9 @@ footer .container{
 }
 
 /* Final BOX PRODUCTOS*/
-
+main{
+    height: 75vh;
+}
 
 }
 
