@@ -35,6 +35,8 @@ body{
 
 /* End Menu */
 
+
+
 h1{ font-size: 3.5em;}
 h2{ font-size: 2.7em;}
 h3{ font-size: 2em;}
@@ -598,11 +600,11 @@ footer .container{
 }
 
 /* personajes SECTION */
-.personajes-section {
+.personajes-section, .articulos-section {
     padding-bottom: 2%;
     margin: 0 auto; 
 }
-.personajes-section__member {
+.personajes-section__member, .articulos-section__member {
     width: 95%;
     margin: 0 auto;
     display: flex;
@@ -614,42 +616,42 @@ footer .container{
 }
 
 
-.personajes-section__member:last-child {
+.personajes-section__member:last-child, .articulos-section__member:last-child {
     border-bottom: none;
     padding-bottom: 0; 
 }
 
-.personajes-section__member__info {
+.personajes-section__member__info, .articulos-section__member__info {
     width: 55%;
     margin-top: 2%; 
 }
 
 
-.personajes-section__member__info h1 {
+.personajes-section__member__info h1, .articulos-section__member__info h1 {
     margin-bottom: 1%; 
 }
 
-.personajes-section__member__info h4 {
+.personajes-section__member__info h4, .articulos-section__member__info h4 {
     text-transform: uppercase;
     color: #a7a7a7;
     margin-bottom: 2%;
     font-weight: 500; 
 }
 
-.personajes-section__member__info p {
+.personajes-section__member__info p, .articulos-section__member__info p {
     color: #2e2e2e; 
 }
 
-.personajes-section__member__image {
+.personajes-section__member__image, .articulos-section__member__image {
     width: 40%;
     height: 100%; 
 }
 
-.personajes-section__member__image img {
+.personajes-section__member__image img, .articulos-section__member__image img {
     width: 100%;
     height: 100%; 
 }
-.personajes_titulo{
+.personajes_titulo, .articulos_titulo{
     text-transform: uppercase;
     font-size: 40px;
     border-bottom: 3px solid #d1d1d1;
@@ -659,7 +661,7 @@ footer .container{
     line-height: 1.66;
 }
 
-.main_personajes{
+.main_personajes, .main_blog{
     width: 70%;
     margin: 3em auto;
 }
@@ -812,6 +814,10 @@ footer .container{
   
 /* END PRODUCTOS*/
 
+/* START BLOG */
+
+/* END BLOG */
+
 @media (max-width: 768px){
     #hero h1{
         font-size: 3em;
@@ -881,20 +887,24 @@ footer .container{
         margin-top: 2em;
     }
 
-    .personajes-section__member__image {
+    .personajes-section__member__image, .articulos-section__member__image {
         width: 100%;
         margin: 0; 
     }
 
-    .personajes-section__member {
+    .personajes-section__member, .articulos-section__member {
         flex-direction: column-reverse;
         padding: 1.5rem 0; 
     }
-    .personajes-section__member:nth-child(2), .personajes-section__member:nth-child(4) {
+    .personajes-section__member:nth-child(2), 
+    .personajes-section__member:nth-child(4), 
+    .articulos-section__member:nth-child(1),
+    .articulos-section__member:nth-child(2), 
+    .articulos-section__member:nth-child(3) {
         flex-direction: column; 
     }
 
-    .personajes-section__member__info {
+    .personajes-section__member__info, .articulos-section__member__info {
         width: 100%;
         margin: 0; 
     }
@@ -951,7 +961,7 @@ footer .container{
     .main_contacto{
         height: 75vh;
     }
-    .personajes-section__member {
+    .personajes-section__member, .articulos-section__member {
         align-items: center; }
 
 }
