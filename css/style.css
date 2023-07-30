@@ -753,44 +753,7 @@ footer .container{
 .main__productos .grupo-prod .cards-style .cards_producto .cards-body h2 {
     margin: 0 0 1.125rem 0;
     font-size: 1.5em;
-    border-bottom: .0625rem solid #908e8eae;
-    border-top: .0625rem solid #908e8eae; 
-}
-
-.naranja {
-    color: #ff8800ef; 
-}
-
-.verde {
-    color: #91ff00; 
-}
-
-.rojo {
-    color: #db143c; 
-}
-
-.negro {
-    color: #000000; 
-}
-
-.rosado {
-    color: #f577b4; 
-}
-.celeste {
-    color: #64d2ee; 
-}
-
-.azul {
-    color: #0064fa; 
-}
-
-.amarillo {
-    color: #ffc400; 
-}
-
-.marron {
-    color: #863804; 
-}
+    border-bottom: .0625rem solid #908e8eae;}
 
 .main__productos .grupo-prod .cards-style .cards_producto .cards-body p {
     font-size: 1em;
