@@ -121,6 +121,11 @@ header a:hover{
     background-position: center center;
 }
 
+#hero a{
+    text-decoration: none;
+    color: white;
+}
+
 #hero h1{
     color: white;
 }
