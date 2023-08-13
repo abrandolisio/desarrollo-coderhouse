@@ -746,6 +746,14 @@ footer .container{
     max-width: 100%;
 }
 
+.main__productos .grupo-prod .cards-style:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.main__productos .grupo-prod .cards-style .cards_producto:hover img{
+    transform: scale(1.2);
+}
+
 .main__productos .grupo-prod .cards-style .cards_producto .cards-body {
     padding: .3125rem; 
 }
@@ -778,6 +786,12 @@ footer .container{
 .main__productos .grupo-prod .cards-style .cards_producto .cards-body button:active {
     transform: scale(0.985);
     box-shadow: inset .125rem .125rem .1875rem #dd2a7b99, inset .125rem .125rem .1875rem #31303099; 
+}
+
+.cards_producto img{
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.5s;
 }
   
 /* END PRODUCTOS*/
