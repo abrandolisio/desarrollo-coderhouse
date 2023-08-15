@@ -608,9 +608,16 @@ footer .container{
 
 .maps{
     grid-area: maps;
-    background-image: url(../images/maps.jpeg);
+    /* background-image: url(../images/maps.jpeg); */
 
 }
+
+.contacto-mapa {
+    margin: 40px 0;
+    border: 0;
+    width: 100%;
+    height: 400px;
+  }
 
 
 

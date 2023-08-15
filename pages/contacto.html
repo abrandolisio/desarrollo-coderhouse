@@ -65,7 +65,7 @@
               </section>
               <div class="contacto">
                 <div class="formulario">
-                  <form class="needs-validation">
+                  <!-- <form class="needs-validation">
                     <div class="form-group">
                       <label for="validationCustom01">Nombre:</label>
                       <input type="text" class="form-control" placeholder="Nombre" required>
@@ -80,10 +80,29 @@
                       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
                     </div>
                     <button id="boton" class="btn btn-primary" type="submit">Enviar</button>
+                  </form> -->
+                  <form class="formulario-contacto mt-5">
+                    <div class="row">
+                      <div class="col-12 col-lg-4 mb-4">
+                        <input class="form-control" type="text" name="nombre" class="input-texto" placeholder="Nombre" required>
+                      </div>
+                      <div class="col-12 col-lg-4 mb-4">
+                        <input class="form-control" type="email" name="email" class="input-texto" placeholder="E-mail" required>
+                      </div>
+                      <div class="col-12 col-lg-4 mb-4">
+                        <input class="form-control" type="text" name="asunto" class="input-texto" placeholder="Asunto" required>
+                      </div>
+                      <div class="col-12 mb-4">
+                        <textarea class="form-control" name="mensaje" cols="40" rows="10" class="input-mensaje" placeholder="Mensaje" required></textarea>
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <input type="submit" value="ENVIAR MENSAJE" class="btn btn-dark mb-4">
+                    </div>
                   </form>
                 </div>
                 <div class="maps">
-                  
+                  <iframe class="contacto-mapa" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-58.39129328727723%2C-34.608398189745124%2C-58.373376131057746%2C-34.60060940983929&amp;layer=mapnik&amp;marker=-34.60450389111019%2C-58.38233470916748" title="Mapa"></iframe>
                 </div>
               </div>
             </div>
