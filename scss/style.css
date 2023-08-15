@@ -46,13 +46,16 @@ li {
 /* VARIABLES */
 header {
   background-color: black;
+  padding: 1em;
 }
-header .logo {
+header .logo a {
   margin: 0;
-  padding: 25px 30px;
   font-weight: bold;
   color: rgb(220, 225, 68);
   font-size: 1.6em;
+}
+header .logo a:hover {
+  color: rgb(220, 225, 68);
 }
 header .container {
   display: flex;
@@ -75,6 +78,10 @@ header a {
 }
 header a:hover {
   color: rgb(168, 73, 5);
+}
+
+.logo {
+  margin-bottom: 0;
 }
 
 /* Start Menu*/
