@@ -34,7 +34,6 @@ Tutor: Esteban Hirzfeld
 Se hizo uso de achivos **scss** para lograr una identificación inmediata de cada sección de nuestro Sitio Web. Las mismas son:
 - **VARIABLES**
 - **RESET**
-- **BODY**
 - **HEADER**
 - **MAIN**
 - **FOOTER**
