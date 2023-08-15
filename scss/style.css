@@ -1,0 +1,774 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 2.7em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.25em;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 1.25em;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* VARIABLES */
+header {
+  background-color: black;
+}
+header .logo {
+  margin: 0;
+  padding: 25px 30px;
+  font-weight: bold;
+  color: rgb(220, 225, 68);
+  font-size: 1.6em;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding-bottom: 0;
+  padding-right: 20px;
+}
+header a {
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(241, 101, 0);
+}
+header a:hover {
+  color: rgb(168, 73, 5);
+}
+
+/* Start Menu*/
+#menu {
+  background-color: black !important;
+}
+
+.icono-menu {
+  background-color: white;
+}
+
+.container-fluid .boton-menu {
+  background-color: white;
+}
+
+.nav-item .link-menu {
+  font-weight: bold;
+  color: rgb(241, 101, 0);
+}
+
+.navbar-nav .link-menu:hover {
+  color: rgb(168, 73, 5);
+}
+
+/* End Menu */
+/* START HERO */
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#hero a {
+  text-decoration: none;
+  color: white;
+}
+#hero h1 {
+  color: white;
+  font-size: 5em;
+}
+#hero button {
+  font-size: 1.75em;
+}
+
+button {
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: rgb(241, 101, 0);
+}
+button:hover {
+  background-color: rgb(168, 73, 5);
+}
+
+/* END HERO */
+/* START PORTADA */
+.portada {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "img-container img-container texto texto" "img-container img-container texto texto";
+}
+
+.texto {
+  grid-area: texto;
+  width: 100%;
+}
+
+.img-container {
+  grid-area: img-container;
+}
+
+#portada .container {
+  text-align: center;
+  padding: 2em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#portada .img-container {
+  background-image: url("../images/goku-vs-freezer.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.color-palabra {
+  color: blueviolet;
+}
+
+#portada .texto {
+  height: 50vh;
+  text-align: initial;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#portada h2 {
+  margin-top: 0px;
+}
+
+#portada .img-container {
+  background-image: url("../images/goku-vs-freezer.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 50vh;
+}
+
+/* END PORTADA */
+/* START BOX PRODUCTOS */
+#box {
+  background-color: rgb(30, 30, 30);
+  color: white;
+  text-align: center;
+}
+#box .container {
+  padding: 150px 12px;
+}
+#box h2 {
+  margin-top: 0;
+  font-size: 3.2em;
+}
+#box p {
+  display: none;
+}
+
+.productos {
+  width: 350px;
+  height: 500px;
+  perspective: 800px;
+}
+
+.productos:hover > .tarjeta {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.tarjeta {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  /* border-radius: 2rem; */
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.productos:first-child .tarjeta {
+  background-image: url(../images/taza-magica-img.jpg);
+}
+
+.productos:nth-child(2) .tarjeta {
+  background-image: url(../images/figura-freezer-img.jpg);
+}
+
+.productos:nth-child(3) .tarjeta {
+  background-image: url(../images/funko-pop-goku-img.jpg);
+}
+
+.back {
+  background-color: rgb(168, 73, 5);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+#box .articulo {
+  background-position: center center;
+  background-size: cover;
+  padding: 50px 0px;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.articulo:first-child {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/taza-magica.jpg");
+}
+
+.articulo:nth-child(2) {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/figura-freezer.jpg");
+}
+
+.articulo:nth-child(3) {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/funko-pop-goku.jpg");
+}
+
+/* END BOX PRODUCTOS */
+/* START BOX */
+#box .descripcion {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+#box p {
+  display: block;
+  margin-bottom: 30px;
+}
+
+#box h2 {
+  font-size: 4em;
+}
+
+#box h3 {
+  margin-top: 0;
+}
+
+#box .personaje {
+  padding: 50px;
+  background-size: 100% 150px;
+  background-repeat: no-repeat;
+  background-position-y: 0;
+  background-color: rgb(50, 50, 50);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.personaje:first-child {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/goku-super-saiyan-img.jpg");
+}
+
+.personaje:nth-child(2) {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vegeta-super-saiyan-img.jpg");
+}
+
+.personaje:nth-child(3) {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/black-freezer-img.jpg");
+}
+
+/* END BOX */
+/* START ARTICULOS */
+#box .articulo {
+  padding: 50px;
+  background-size: 100% 150px;
+  background-repeat: no-repeat;
+  background-position-y: 0;
+  background-color: rgb(50, 50, 50);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.articulo:first-child {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/goku-super-saiyan-img.jpg");
+}
+
+.articulo:nth-child(2) {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vegeta-super-saiyan-img.jpg");
+}
+
+.articulo:nth-child(3) {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/black-freezer-img.jpg");
+}
+
+.main__productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 9.375rem);
+  justify-content: none;
+  align-items: none;
+  grid-template-areas: none;
+}
+
+.main__productos .main__titulo__producto {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  align-self: center;
+  justify-self: center;
+  margin: 0.625rem;
+  transition: all 0.5s;
+}
+
+.main__productos .main__titulo__producto h3 {
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.main__productos .main__titulo__producto h3 strong {
+  color: rgb(241, 101, 0);
+  font-weight: 800;
+}
+
+.main__productos .grupo-prod {
+  grid-column: 1/4;
+  grid-row: 2/11;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  margin: 0 0 1.25rem 0;
+}
+
+.main__productos .grupo-prod .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
+  grid-template-rows: none;
+  justify-content: none;
+  align-items: none;
+  grid-template-areas: none;
+  padding-inline: 1.5rem;
+  gap: 1.5rem;
+  color: #ededed;
+}
+
+.main__productos .grupo-prod .cards-style {
+  position: relative;
+  box-shadow: none;
+  border-radius: 2px;
+  transform-origin: center;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 1.25rem 1.25rem 1.875rem rgba(0, 0, 0, 0.0509803922);
+  background-color: rgba(35, 35, 35, 0.6901960784);
+}
+
+.main__productos .grupo-prod .cards-style .cards_producto {
+  border: 2px solid rgba(35, 35, 35, 0.6823529412);
+  text-align: center;
+}
+
+.main__productos .grupo-prod .cards-style .cards_producto img {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.main__productos .grupo-prod .cards-style:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.main__productos .grupo-prod .cards-style .cards_producto:hover img {
+  transform: scale(1.2);
+}
+
+.main__productos .grupo-prod .cards-style .cards_producto .cards-body {
+  padding: 0.3125rem;
+}
+
+.main__productos .grupo-prod .cards-style .cards_producto .cards-body h2 {
+  margin: 0 0 1.125rem 0;
+  font-size: 1.5em;
+  border-bottom: 0.0625rem solid rgba(144, 142, 142, 0.6823529412);
+}
+
+.main__productos .grupo-prod .cards-style .cards_producto .cards-body p {
+  font-size: 1em;
+  margin: 0 0 0.625rem 0;
+}
+
+.main__productos .grupo-prod .cards-style .cards_producto .cards-body button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+  /* width: 100%; */
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+  color: #ededed;
+  padding: 0.5em 2em;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid rgba(253, 0, 122, 0.9333333333);
+}
+
+.main__productos .grupo-prod .cards-style .cards_producto .cards-body button:active {
+  transform: scale(0.985);
+  box-shadow: inset 0.125rem 0.125rem 0.1875rem rgba(221, 42, 123, 0.6), inset 0.125rem 0.125rem 0.1875rem rgba(49, 48, 48, 0.6);
+}
+
+.cards_producto img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.5s;
+}
+
+.rojo {
+  color: #db143c;
+}
+
+.verde {
+  color: #91ff00;
+}
+
+.amarillo {
+  color: #ffc400;
+}
+
+.rosado {
+  color: #f577b4;
+}
+
+.naranja {
+  color: rgba(255, 136, 0, 0.937254902);
+}
+
+.marron {
+  color: #863804;
+}
+
+.azul {
+  color: #0064fa;
+}
+
+.celeste {
+  color: #64d2ee;
+}
+
+.negro {
+  color: #000000;
+}
+
+/* END ARTICULOS */
+/* START PERSONAJES */
+#box .personaje {
+  padding: 50px;
+  background-size: 100% 150px;
+  background-repeat: no-repeat;
+  background-position-y: 0;
+  background-color: rgb(50, 50, 50);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.personaje:first-child {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/goku-super-saiyan-img.jpg");
+}
+
+.personaje:nth-child(2) {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vegeta-super-saiyan-img.jpg");
+}
+
+.personaje:nth-child(3) {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/black-freezer-img.jpg");
+}
+
+.personajes-section, .articulos-section {
+  padding-bottom: 2%;
+  margin: 0 auto;
+}
+
+.personajes-section__member, .articulos-section__member {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.personajes-section__member:last-child, .articulos-section__member:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.personajes-section__member__info, .articulos-section__member__info {
+  width: 55%;
+  margin-top: 2%;
+}
+
+.personajes-section__member__info h1, .articulos-section__member__info h1 {
+  margin-bottom: 1%;
+}
+
+.personajes-section__member__info h4, .articulos-section__member__info h4 {
+  text-transform: uppercase;
+  color: #a7a7a7;
+  margin-bottom: 2%;
+  font-weight: 500;
+}
+
+.personajes-section__member__info p, .articulos-section__member__info p {
+  color: #2e2e2e;
+}
+
+.personajes-section__member__image, .articulos-section__member__image {
+  width: 40%;
+  height: 100%;
+}
+
+.personajes-section__member__image img, .articulos-section__member__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.personajes_titulo, .articulos_titulo {
+  text-transform: uppercase;
+  font-size: 40px;
+  border-bottom: 3px solid #d1d1d1;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.66;
+}
+
+.main_personajes, .main_blog {
+  width: 70%;
+  margin: 3em auto;
+}
+
+/* END PERSONAJES */
+/* START CONTACTO */
+.contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "formulario formulario maps maps" "formulario formulario maps maps";
+  gap: 1em;
+  margin-bottom: 3em;
+  padding: 1em;
+}
+
+.titulo {
+  text-align: center;
+  padding-top: 3em;
+  margin-bottom: 2em;
+}
+
+.formulario {
+  grid-area: formulario;
+}
+
+.maps {
+  grid-area: maps;
+}
+
+.contacto-mapa {
+  margin: 40px 0;
+  border: 0;
+  width: 100%;
+  height: 400px;
+}
+
+.maps img {
+  height: 50%;
+  max-width: 50%;
+}
+
+#boton {
+  margin: 1em;
+  padding: 1em;
+}
+
+/* END CONTACTO */
+footer {
+  background-color: rgb(230, 230, 230);
+}
+
+footer p {
+  margin: 0;
+  padding: 12px;
+  color: rgb(100, 100, 100);
+}
+
+footer .container {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+footer .container {
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 3em;
+  }
+  #box .descripcion .productos {
+    background-size: 100% 50%;
+    padding: 1em;
+  }
+  .productos {
+    width: 100%;
+  }
+  .front {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .productos:first-child .tarjeta {
+    background-image: url(../images/taza-magica-img.jpg);
+    background-repeat: no-repeat;
+  }
+  .productos:nth-child(2) .tarjeta {
+    background-image: url(../images/figura-freezer-img.jpg);
+  }
+  .productos:nth-child(3) .tarjeta {
+    background-image: url(../images/funko-pop-goku-img.jpg);
+  }
+}
+@media (max-width: 1199px) {
+  header {
+    position: relative;
+  }
+  .contacto {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "maps" "formulario";
+  }
+  #caracteristicas .container {
+    padding: 0;
+  }
+  .container .descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #box .productos {
+    background-size: 100% 100%;
+  }
+  .productos {
+    width: 100%;
+  }
+  .productos:first-child .tarjeta {
+    background-image: url(../images/taza-magica-img.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .productos:nth-child(2) .tarjeta {
+    background-image: url(../images/figura-freezer-img.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .productos:nth-child(3) .tarjeta {
+    background-image: url(../images/funko-pop-goku-img.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .portada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .portada .texto {
+    width: 90vw;
+    max-width: none;
+    margin-top: 2em;
+  }
+  #portada .img-container {
+    height: 50vh;
+    width: 90vw;
+  }
+  .personajes-section__member__image, .articulos-section__member__image {
+    width: 100%;
+    margin: 0;
+  }
+  .personajes-section__member, .articulos-section__member {
+    flex-direction: column-reverse;
+    padding: 1.5rem 0;
+  }
+  .personajes-section__member:nth-child(2),
+  .personajes-section__member:nth-child(4),
+  .articulos-section__member:nth-child(1),
+  .articulos-section__member:nth-child(2),
+  .articulos-section__member:nth-child(3) {
+    flex-direction: column;
+  }
+  .personajes-section__member__info, .articulos-section__member__info {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .main_contacto {
+    height: 75vh;
+  }
+  .personajes-section__member, .articulos-section__member {
+    align-items: center;
+  }
+}/*# sourceMappingURL=style.css.map */

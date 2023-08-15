@@ -1,0 +1,65 @@
+header{
+    background-color: black;
+    
+    .logo{
+        margin: 0;
+        padding: 25px 30px;
+        font-weight: bold;
+        color: rgb(220, 225, 68);
+        font-size: 1.6em;
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    a{
+        padding: 5px 12px;
+        text-decoration: none;
+        font-weight: bold;
+        color: $color-principal;
+    }
+
+    a:hover{
+        color: $color-secundario;
+    }
+
+
+}
+
+
+/* Start Menu*/
+#menu{
+    background-color: black !important;
+}
+
+.icono-menu{
+    background-color: white;
+}
+
+.container-fluid .boton-menu{
+    background-color: white;
+}
+
+.nav-item .link-menu{
+    
+    font-weight: bold;
+    color: $color-principal;
+}
+
+.navbar-nav .link-menu:hover{
+    color: $color-secundario;
+}
+
+/* End Menu */

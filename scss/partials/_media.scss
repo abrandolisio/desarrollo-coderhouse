@@ -1,0 +1,132 @@
+@media (max-width: 768px){
+    #hero h1{
+        font-size: 3em;
+    }
+
+    #box .descripcion .productos{
+        background-size: 100% 50%; 
+        padding: 1em;
+    }
+    .productos{
+        width: 100%;
+    }
+    .front {
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    .productos:first-child .tarjeta{
+        background-image: url(../images/taza-magica-img.jpg);
+        background-repeat: no-repeat;
+      }
+    
+    .productos:nth-child(2) .tarjeta{
+        background-image: url(../images/figura-freezer-img.jpg);
+      }
+    
+    .productos:nth-child(3) .tarjeta{
+        background-image: url(../images/funko-pop-goku-img.jpg);
+      }
+
+}
+
+
+@media (max-width: 1199px){
+    header{
+        position: relative;
+    }
+
+
+    .contacto{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "maps"
+            "formulario";
+    }
+
+    #caracteristicas .container{
+        padding: 0;
+    }
+
+    .container .descripcion{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #box .productos{
+         background-size: 100% 100%;
+        
+    }
+
+    .productos{
+        width: 100%;
+    }
+
+    .productos:first-child .tarjeta{
+        background-image: url(../images/taza-magica-img.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+    .productos:nth-child(2) .tarjeta{
+        background-image: url(../images/figura-freezer-img.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+    
+    .productos:nth-child(3) .tarjeta{
+        background-image: url(../images/funko-pop-goku-img.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+
+    .portada{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .texto{
+            width: 90vw;
+            max-width: none;
+            margin-top: 2em;
+        }
+    }
+
+    #portada .img-container{
+        height: 50vh;
+        width: 90vw;
+    }
+
+    .personajes-section__member__image, .articulos-section__member__image {
+        width: 100%;
+        margin: 0; 
+    }
+
+    .personajes-section__member, .articulos-section__member {
+        flex-direction: column-reverse;
+        padding: 1.5rem 0; 
+    }
+    .personajes-section__member:nth-child(2), 
+    .personajes-section__member:nth-child(4), 
+    .articulos-section__member:nth-child(1),
+    .articulos-section__member:nth-child(2), 
+    .articulos-section__member:nth-child(3) {
+        flex-direction: column; 
+    }
+
+    .personajes-section__member__info, .articulos-section__member__info {
+        width: 100%;
+        margin: 0; 
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .main_contacto{
+        height: 75vh;
+    }
+    .personajes-section__member, .articulos-section__member {
+        align-items: center; }
+
+}
+
